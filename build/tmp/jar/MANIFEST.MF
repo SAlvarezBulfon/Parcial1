@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Application: com.prog3.ApiRest.Application
+
