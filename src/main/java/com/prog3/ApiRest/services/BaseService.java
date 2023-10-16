@@ -1,6 +1,8 @@
 package com.prog3.ApiRest.services;
 
 import com.prog3.ApiRest.entities.Base;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import javax.swing.text.html.parser.Entity;
 import java.io.Serializable;
@@ -9,6 +11,7 @@ import java.util.List;
 //Que reciba cualquier tipo de entidad
 public interface BaseService<E extends Base, ID extends Serializable>{
     public List<E> findAll() throws Exception;
+    public Page<E> findAll(Pageable pageable) throws Exception;
 
     public E findById(ID id) throws Exception;
 
